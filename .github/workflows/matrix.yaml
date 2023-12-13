@@ -10,14 +10,14 @@ jobs:
     strategy:
       matrix:
         foo:
-          - ghcr.io
+          - original_foo
         bar:
           - value_1
           - value_2
         include:
           - bar: value_1
             buzz: buzz_1 # additional matrix
-            foo: gcr.io # Additional element to array
+            foo: additional_foo # Additional element to array
           - bar: value_2
             buzz: buzz_2 # additional matrix
     steps:
